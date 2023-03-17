@@ -1,0 +1,236 @@
+.section{
+    .MuiButton-root{
+        background-color: var(--action);
+        color: var(--action-text);
+        font-family: var(--ff-cabin);
+        z-index: 1;
+        &:after {
+            background: var(--action-hover);
+        }
+        &:hover {
+            color: var(--action-hover-text);
+        }
+    }
+    .min-height-420{
+        min-height: 420px;
+    }
+    .background-img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top:0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        &.pattern{
+            opacity: 0.08;
+        }
+    }
+    .background-pattern{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top:0;
+        &:after{
+            content: "";
+            opacity: 0.1;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            top:0;
+            background-image: url('~/public/res/image/bg-pattren.png');
+            background-size: contain;
+            background-repeat:  repeat;
+            background-position: center;
+        }
+    }
+    &.primary {
+        .background {
+            background-color: var(--primary);
+        }
+        .MuiButton-root {
+            background-color: var(--action);
+            color: var(--action-text);
+            font-family: var(--ff-cabin);
+            z-index: 1;
+            &:after {
+                background: var(--action-i-hover);
+            }
+            &:hover {
+                color: var(--action-hover-text);
+            }
+        }
+    }
+    .primary-text {
+        color: var(--primary);
+    }
+    .big-pill {
+        width: 100%;
+        min-width: 120px;
+        max-width: 160px;
+        position: relative;
+        border-radius: 120px;
+        overflow: hidden;
+        background-size: cover;
+        background-repeat:  repeat;
+        background-position: center;
+        &.img1 { background-image: url('~/public/res/image/pill-1.png') }
+        &.img2 { background-image: url('~/public/res/image/pill-2.png') }
+        &.img3 { background-image: url('~/public/res/image/pill-3.png') }
+        &.img4 { background-image: url('~/public/res/image/pill-4.png') }
+        &.img5 { background-image: url('~/public/res/image/pill-5.png') }
+        &.img6 { background-image: url('~/public/res/image/pill-6.png') }
+        &.img7 { background-image: url('~/public/res/image/pill-7.png') }
+        &:after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            display: block;
+            padding-top: 325%;
+            position: relative;
+            z-index: -1;
+            background-color: gray;
+            opacity: 0;
+        }
+    }
+    .xl-right-middle{
+        right: 0;
+        transform: translate(50%);
+        @media (min-width: 1024px) {
+            right:auto;
+            transform: translate(0);
+        }
+    }
+    .bubble-section{
+        & > * {
+            max-width: 180px;
+            width: 100%;
+        }
+    }
+    .bubble {
+        position:relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-clip: padding-box;
+        padding: 1px;
+        .circle {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding-top: 50%;
+            padding-bottom: 50%;
+            background: linear-gradient(180deg, #393942 0%, #1f1f22  100%);
+            border-radius: 50%;
+        }
+        &::after {
+            content: "";
+            overflow: hidden;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            top: 0px; bottom: 0px;
+            left: 0px; right: 0px;
+            border-radius: 50%;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.0) 100%);
+        }
+        img {
+            position: absolute;
+            width: 50%;
+        }
+    }
+    .bubble-space {
+        min-height: 120px;
+    }
+}
+.card {
+    border-radius: 4px;
+    padding: 16px;
+    background: var(--card);
+    max-width: 480px;
+    min-width: 360px;
+    width: 100%;
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    .card-image{
+        width: 100%;
+        padding-top: 67.35%;
+        background-color: grey;
+        border-radius: 4px;
+        .image{
+            border-radius: 4px;
+        }
+    }
+    .badge {
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 0.02em;
+        background-color: gray;
+        color: white;
+        padding: 4px 10px 4px 8px;
+        border-radius: 3px;
+        span {
+            line-height: 1;
+        }
+        &.color1{
+            background-color: #8300F3;
+        }
+        &.color2{
+            background-color: #00A556;
+        }
+        &.color3{
+            background-color: #FF0000;
+        }
+        &.color4{
+            background-color: #8300F3;
+        }
+    }
+    .info{
+        color: var(--card-info);
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+    }   
+    .br {
+        width: 100%;
+        height: 1px;
+        background-color: #B3B4B7;
+        margin: 4px 0;
+    }
+    .footer {
+        padding-bottom: 8px;
+        .offer {
+            font-size: 20x;
+            font-weight: 500;
+            color: #FF0000;
+        }
+        .link {
+            font-size: 20x;
+            font-weight: 500;
+            color: var(--primary);
+        }
+    }
+    .card-details {
+        padding: 0 16px;
+        h3 {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--card-title);
+            display: block;
+            height: 66px;
+            overflow: hidden;
+            letter-spacing: 0.02em;
+        }
+    }
+}

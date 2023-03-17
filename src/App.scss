@@ -1,0 +1,42 @@
+@import "./context/theme/color.scss";
+@import "./context/theme/color-theme.scss";
+.themeContext{
+    background-color: var(--background);
+    color: var(--text-secondary);
+    .text-primary {
+        color: var(--text-primary);
+    }
+    .text-primary-800 {
+        color: var(--text-primary-800);
+    }
+    .text-primary-700 {
+        color: var(--text-primary-700);
+    }
+    .text-primary-600 {
+        color: var(--text-primary-600);
+    }
+    .text-secondary {
+        color: var(--text-secondary);
+    }
+    .text-secondary-800 {
+        color: var(--text-secondary-800);
+    }
+    .text-secondary-700 {
+        color: var(--text-secondary-700);
+    }
+    .text-secondary-600 {
+        color: var(--text-secondary-600);
+    }
+}
+.app-style {
+    font-family: var(--ff-cabin);
+    .MuiTypography-root{font-family: "Inter", sans-serif;}
+    .layout-main { max-width: 1180px; width: 100%; margin: 0 auto; }
+    .font-poppins {
+        font-family: "poppins", sans-serif;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: initial;
+        font-optical-sizing: auto;
+    }
+}

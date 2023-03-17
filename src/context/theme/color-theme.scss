@@ -1,0 +1,102 @@
+@import "./color.scss";
+
+$themes: (
+    primary:(
+        darkTheme: $purple,
+        lightTheme: $purple,
+    ),
+    primary-text:(
+        darkTheme: $woodsmoke,
+        lightTheme: $woodsmoke,
+    ),
+    secondary:(
+        darkTheme: $white,
+        lightTheme: $white,
+    ),
+    secondary-text:(
+        darkTheme: $purple,
+        lightTheme: $purple,
+    ),
+    background:(
+        darkTheme: $woodsmoke,
+        lightTheme: $white,
+    ),
+    text:(
+        darkTheme: $white,
+        lightTheme: $woodsmoke,
+    ),
+    background-shade100:(
+        darkTheme: $woodsmoke100,
+        lightTheme: $white100,
+    ),
+    background-shade200:(
+        darkTheme: $woodsmoke200,
+        lightTheme: $white200,
+    ),
+    background-i-shade100:(
+        darkTheme: $white100,
+        lightTheme: $woodsmoke100,
+    ),
+    background-i-shade200:(
+        darkTheme: $white200,
+        lightTheme: $woodsmoke200,
+    ),
+    ribbon:(
+        darkTheme: $woodsmoke,
+        lightTheme: $woodsmoke,
+    ),
+    ribbon-text:(
+        darkTheme: $woodsmoke,
+        lightTheme: $woodsmoke,
+    ),
+    action:(
+        darkTheme: $white,
+        lightTheme: $woodsmoke,
+    ),
+    action-text:(
+        darkTheme: $woodsmoke,
+        lightTheme: $white,
+    ),
+    action-hover:(
+        darkTheme: $purple,
+        lightTheme: $purple,
+    ),
+    action-i-hover:(
+        darkTheme: $woodsmoke,
+        lightTheme: $woodsmoke,
+    ),
+    action-hover-text:(
+        darkTheme: $white,
+        lightTheme: $white,
+    ),
+    card:(
+        darkTheme: $white,
+        lightTheme: $woodsmoke,
+    ),
+    card-info:(
+        darkTheme: $gray,
+        lightTheme: $gray,
+    ),
+    card-title:(
+        darkTheme: $woodsmoke,
+        lightTheme: $woodsmoke,
+    ),
+);
+
+@mixin styles($mode) {
+  @each $key, $map in $themes {
+    @each $prop, $color in $map {
+      @if $prop == $mode {
+        --#{$key}: #{$color};
+      }
+    }
+  }
+}
+
+.dark-mode {
+  @include styles("darkTheme");
+}
+
+.light-mode {
+  @include styles("lightTheme");
+}
