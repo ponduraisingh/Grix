@@ -1,13 +1,14 @@
 import React from "react";
-import { motion } from 'framer-motion';
+import { motion, useTransform, useScroll, circOut  } from 'framer-motion';
 
 import "./style.scss";
 import { Ai, Ae, Fi, Me, Pr, Ps, Xd } from "res/img";
 import { ButtonPrimary } from "component/button";
 import { useNavHeightContext } from "page/laylout";
 import { useThemeContext } from "context/theme/themeContext";
-import { SheenAnimation } from "component/animation";
-import {StarTailRight, TwinkleStarIcon, StarIcon, LineRightIcon, DotIcon, LayerIcon, CertifiedIcon, MemberIcon, UpIcon, LifeIcon, CommunityIcon, QuoteIcon} from "res/icons";
+import { SheenAnimation, ScrollYAnimation } from "component/animation";
+// import {StarTailRight, TwinkleStarIcon, StarIcon, LineRightIcon, DotIcon, LayerIcon, CertifiedIcon, MemberIcon, UpIcon, LifeIcon, CommunityIcon, QuoteIcon} from "res/icons";
+import {DotIcon} from "res/icons";
 interface courseProps {
     title: string;
     img: string;
@@ -84,94 +85,59 @@ const HomePage = () => {
             offer: "Hurry up 25% Off",
             link: ""
         }
-    ]
-    const PrMotion = {
-        PrInit: { scale: 0.9 },
-        PrHover: { scale: 1.0 },
-    };
-    const PrCircle = {
-        PrInit: {  },
-        PrHover: { style: { background: "linear-gradient(136.12deg, rgba(255, 255, 255, 0.8) 30.98%, rgba(0, 255, 209, 0.8) 92.73%), #1DFAE5" } },
-    };
-    const AeMotion = {
-        PrInit: { scale: 0.9 },
-        PrHover: { scale: 1.0 },
-    };
-    const AeCircle = {
-        PrInit: {  },
-        PrHover: { style: { background: "linear-gradient(136.12deg, rgba(255, 255, 255, 0.8) 30.98%, rgba(0, 255, 209, 0.8) 92.73%), #1DFAE5" } },
-    };
-    const PsMotion = {
-        PrInit: { scale: 0.9 },
-        PrHover: { scale: 1.0 },
-    };
-    const PsCircle = {
-        PrInit: {  },
-        PrHover: { style: { background: "linear-gradient(136.12deg, rgba(255, 255, 255, 0.8) 30.98%, rgba(0, 255, 209, 0.8) 92.73%), #1DFAE5" } },
-    };
-    const FiMotion = {
-        PrInit: { scale: 0.9 },
-        PrHover: { scale: 1.0 },
-    };
-    const FiCircle = {
-        PrInit: {  },
-        PrHover: { style: { background: "linear-gradient(136.12deg, rgba(255, 255, 255, 0.8) 30.98%, rgba(0, 255, 209, 0.8) 92.73%), #1DFAE5" } },
-    };
-    const MeMotion = {
-        PrInit: { scale: 0.9 },
-        PrHover: { scale: 1.0 },
-    };
-    const MeCircle = {
-        PrInit: {  },
-        PrHover: { style: { background: "linear-gradient(136.12deg, rgba(255, 255, 255, 0.8) 30.98%, rgba(0, 255, 209, 0.8) 92.73%), #1DFAE5" } },
-    };
-    const AiMotion = {
-        PrInit: { scale: 0.9 },
-        PrHover: { scale: 1.0 },
-    };
-    const AiCircle = {
-        PrInit: {  },
-        PrHover: { style: { background: "linear-gradient(136.12deg, rgba(255, 255, 255, 0.8) 30.98%, rgba(0, 255, 209, 0.8) 92.73%), #1DFAE5" } },
-    };
-    const XdMotion = {
-        PrInit: { scale: 0.9 },
-        PrHover: { scale: 1.0 },
-    };
-    const XdCircle = {
-        PrInit: {  },
-        PrHover: { style: { background: "linear-gradient(136.12deg, rgba(255, 255, 255, 0.8) 30.98%, rgba(0, 255, 209, 0.8) 92.73%), #1DFAE5" } },
-    };
+    ];
+    const { scrollYProgress } = useScroll();
+    
+    const ref1 = React.useRef<HTMLDivElement>(null);
+    const [start1, middel1, end1] = ScrollYAnimation(ref1);
+    const animation1_1 = useTransform(scrollYProgress, [start1, end1], ["0%", "50%"]);
+    const animation1_2 = useTransform(scrollYProgress, [start1, middel1, end1], [1.1, 1, 0.8], { ease: circOut });
+
+    const ref2 = React.useRef<HTMLDivElement>(null);
+    const [start2, middel2, end2] = ScrollYAnimation(ref2);
+    const animation2_1 = useTransform(scrollYProgress, [start2, middel2, end2], [0, 1, 1], { ease: circOut });
+    const animation2_2 = useTransform(scrollYProgress, [start2, middel2, end2], ["100%", "0%", "10%"], { ease: circOut });
+    const animation2_3 = useTransform(scrollYProgress, [start2, end2], ["-50%", "50%"]);
+    const animation2_4 = useTransform(scrollYProgress, [start2, end2], ["50%", "-50%"]);
+
+    const section1 = {
+        visible: { opacity: 1, scale: 2 },
+        hidden: { opacity: 0, scale: 0 },
+    }
+
     return (
         <React.Fragment>
-            <section className="section one relative py-15">
+            <section className="section one relative py-15" ref={ref1}>
                 <div className="header-space" style={{minHeight: navHeight}} />
                 <div className="container">
                     <div className="flex col gap-4 xl-gap-6 text-center">
                         <h1>Learn UX/UI Design Live courses & more programs</h1>
-                        <br />
-                        <div className="text-center">
+                        <p>Trusted by 3000+ Designers in 50+ countries</p>
+                        <motion.div style={{scale: animation1_2}} className="text-center">
                             <ButtonPrimary variant="contained">View Course</ButtonPrimary>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
                 <div className="background-img light"></div>
-                <div className="background-img dark" style={themeContext?.theme === "dark" ? {backgroundImage:"url('res/image/dark-bg-1.png')"} : {backgroundImage:"url('res/image/light-bg-1.png')"}}></div>
+                <motion.div className="background-img dark" style={{translateY: animation1_1, ...themeContext?.theme === "dark" ? {backgroundImage:"url('res/image/dark-bg-1.png')"} : {backgroundImage:"url('res/image/light-bg-1.png')"} }}></motion.div>
             </section>
-            <section className="section two primary relative  overflow-hidden">
+            <section className="section two primary relative  overflow-hidden" ref={ref2}>
                 <div className="container">
                     <div className="flex gap-2 py-15 middle">
                         <div className="flex-1 xl-flex-3 relative z-index1">
-                            <div className="flex col gap-2 xl-gap-4 center min-height-420">
-                                <h3>Change your life  become a UX/UI Designer.</h3>
+                            <motion.div style={{opacity: animation2_1, translateY: animation2_2 }} className="flex col gap-2 xl-gap-4 center min-height-420">
+                                <motion.h3>Change your life  become a UX/UI Designer.</motion.h3>
                                 <p>An online digital campus called Graxi Design trains product teams and career changers in UX/UI design.</p>
                                 <div className="text-left">
+                                    <motion.span style={{scale: animation2_1}}>
                                     <ButtonPrimary variant="contained">View Course</ButtonPrimary>
+                                    </motion.span>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
                         <div className="flex-0 xl-flex-1 absolute xl-relative xl-right-middle">
                             <div className="flex gap-2 middle opacity-50 xl-opacity-100" style={{margin: "-71.25% 0"}}>
-                                <div className="flex col gap-2">
+                                <motion.div style={{translateY: animation2_3}} className="flex col gap-2">
                                     <motion.div 
                                         className="big-pill img1"
                                         animate={{ y: [64, 0, 64] }}
@@ -182,7 +148,7 @@ const HomePage = () => {
                                         animate={{ y: [64, 0, 64] }}
                                         transition={{ duration: 8, repeat: Infinity }}
                                     />
-                                </div>
+                                </motion.div>
                                 <div className="flex col gap-2">
                                     <motion.div 
                                         className="big-pill img3"
@@ -200,7 +166,7 @@ const HomePage = () => {
                                         transition={{ duration: 8, repeat: Infinity }}
                                     />
                                 </div>
-                                <div className="flex col gap-2">
+                                <motion.div style={{translateY: animation2_4}} className="flex col gap-2">
                                     <motion.div 
                                         className="big-pill img6"
                                         animate={{ y: [-64, 0, -64] }}
@@ -211,13 +177,13 @@ const HomePage = () => {
                                         animate={{ y: [-64, 0, -64] }}
                                         transition={{ duration: 8, repeat: Infinity }}
                                     />
-                                </div>
+                                </motion.div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="background-img light"></div>
-                <div className="background-pattern background"></div>
+                <motion.div className="background-pattern background"></motion.div>
             </section>
             <section className="section three relative py-15 overflow-hidden">
                 <div className="container">
@@ -253,7 +219,7 @@ const HomePage = () => {
                 <div className="background-img light"></div>
                 <div className="background-pattern background"></div>
             </section>
-            <section ref={toolsRef} className="section five relative py-15 overflow-hidden">
+            <section className="section five relative py-15 overflow-hidden">
                 <div className="container">
                     <div className="flex col gap-4 middle w-full">
                         <h4 className="text-center">Tools Training</h4>
@@ -261,12 +227,9 @@ const HomePage = () => {
                     <div className="flex w-full space-between pt-10 gap-2 bubble-section">
                         <div className="flex-1 flex col gap-2">
                             <div className="flex">
-                                <motion.a 
-                                    variants={PrMotion}
-                                    initial= "PrInit"
-                                    whileHover= "PrHover"
+                                <motion.a
                                     className="bubble flex center middle">
-                                    <motion.div className="circle" variants={PrCircle} />
+                                    <motion.div className="circle" />
                                     <img src={Pr} alt="Premiere pro" />
                                 </motion.a>
                             </div>
@@ -279,24 +242,18 @@ const HomePage = () => {
                                 <br />
                             </div>
                             <div className="flex">
-                                <motion.a 
-                                    variants={AeMotion}
-                                    initial= "AeInit"
-                                    whileHover= "AeHover"
+                                <motion.a
                                     className="bubble flex center middle">
-                                    <motion.div className="circle" variants={AeCircle} />
+                                    <motion.div className="circle" />
                                     <img src={Ae} alt="After effect" />
                                 </motion.a>
                             </div>
                         </div>
                         <div className="flex-1 flex col gap-2">
                             <div className="flex">
-                                <motion.a 
-                                    variants={PsMotion}
-                                    initial= "PsInit"
-                                    whileHover= "PsHover"
+                                <motion.a
                                     className="bubble flex center middle">
-                                    <motion.div className="circle" variants={PsCircle} />
+                                    <motion.div className="circle" />
                                     <img src={Ps} alt="photoshop" />
                                 </motion.a>
                             </div>
@@ -309,24 +266,18 @@ const HomePage = () => {
                                 <br />
                             </div>
                             <div className="flex">
-                                <motion.a 
-                                    variants={FiMotion}
-                                    initial= "FiInit"
-                                    whileHover= "FiHover"
+                                <motion.a
                                     className="bubble flex center middle">
-                                    <motion.div className="circle" variants={FiCircle} />
+                                    <motion.div className="circle" />
                                     <img src={Fi} alt="Figma" />
                                 </motion.a>
                             </div>
                         </div>
                         <div className="flex-1 flex col gap-2">
                             <div className="flex">
-                                <motion.a 
-                                    variants={MeMotion}
-                                    initial= "MeInit"
-                                    whileHover= "MeHover"
+                                <motion.a
                                     className="bubble flex center middle">
-                                    <motion.div className="circle" variants={MeCircle} />
+                                    <motion.div className="circle" />
                                     <img src={Me} alt="media encoder" />
                                 </motion.a>
                             </div>
@@ -339,24 +290,18 @@ const HomePage = () => {
                                 <br />
                             </div>
                             <div className="flex">
-                                <motion.a 
-                                    variants={AiMotion}
-                                    initial= "AiInit"
-                                    whileHover= "AiHover"
+                                <motion.a
                                     className="bubble flex center middle">
-                                    <motion.div className="circle" variants={AiCircle} />
+                                    <motion.div className="circle" />
                                     <img src={Ai} alt="Adobe illustator" />
                                 </motion.a>
                             </div>
                         </div>
                         <div className="flex-1 flex col gap-2">
                             <div className="flex">
-                                <motion.a 
-                                    variants={XdMotion}
-                                    initial= "XdInit"
-                                    whileHover= "XdHover"
+                                <motion.a
                                     className="bubble flex center middle">
-                                    <motion.div className="circle" variants={XdCircle} />
+                                    <motion.div className="circle" />
                                     <img src={Xd} alt="Adobe XD" />
                                 </motion.a>
                             </div>
