@@ -8,4 +8,5 @@ import Me from "./img/me.png";
 import Pr from "./img/pr.png";
 import Ps from "./img/ps.png";
 import Xd from "./img/xd.png";
-export { Image1, Image2, Image3, Ai, Ae, Fi, Me, Pr, Ps, Xd  };
+import showcase from "./img/showcase.png";
+export { Image1, Image2, Image3, Ai, Ae, Fi, Me, Pr, Ps, Xd, showcase };

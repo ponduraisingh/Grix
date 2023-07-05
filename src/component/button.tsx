@@ -2,11 +2,11 @@ import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 
 const ButtonPrimary = styled(Button)(({ theme }) => ({
-    fontSize:20,
+    fontSize:16,
     fontWeight:500,
     boxShadow: "none",
     overflow: "hidden",
-    padding:"18px 40px",
+    padding:"12px 28px",
     lineHeight: 1.1,
     position: "relative",
     textTransform: "none",
@@ -38,5 +38,46 @@ const ButtonPrimary = styled(Button)(({ theme }) => ({
       }
     },
 }));
+const ButtonOutline = styled(Button)(({ theme }) => ({
+    fontSize:16,
+    fontWeight:500,
+    boxShadow: "none",
+    overflow: "hidden",
+    padding:"12px 16px",
+    lineHeight: 1.1,
+    position: "relative",
+    textTransform: "none",
+    WebkitTransition: "all 0.3s ease 0s",
+    MozTransition: "all 0.3s ease 0s",
+    OTransition: "all 0.3s ease 0s",
+    transition: "all 0.3s ease 0s",
+    borderRadius: 4,
+    maxWidth: 320,
+    "&:hover": {
+      "&:after": {
+        height: "450%",
+      }
+    },
+}));
+const ButtonAction = styled(Button)(({ theme }) => ({
+    fontSize:16,
+    fontWeight:500,
+    boxShadow: "none",
+    overflow: "hidden",
+    padding:"16px 32px",
+    lineHeight: 1.1,
+    position: "relative",
+    textTransform: "none",
+    WebkitTransition: "all 0.3s ease 0s",
+    MozTransition: "all 0.3s ease 0s",
+    OTransition: "all 0.3s ease 0s",
+    transition: "all 0.3s ease 0s",
+    borderRadius: 4,
+    "&:hover": {
+      "&:after": {
+        height: "450%",
+      }
+    },
+}));
 
-export { ButtonPrimary };
+export { ButtonPrimary, ButtonOutline, ButtonAction };

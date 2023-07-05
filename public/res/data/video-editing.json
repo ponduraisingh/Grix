@@ -1,0 +1,171 @@
+{
+    "title": "Zero to hero-Motion Graphics & Video Editing",
+    "description": "Start learning how to edit videos from scratch using After Effects and Adobe Premiere Pro CC today, with step-by-step tutorials that are easy to follow!",
+    "imgUrl": "/res/course/03.jpg",
+    "overview": "Course Overview",
+    "overviewDescription": "Video editing involves manipulating and rearranging video footage to create a final product. Motion graphics are animated visual elements used to create engaging visuals. Both are used in film, television, advertising, and online content creation. These skills can lead to careers in various industries.",
+    "duration": "3 months",
+    "lessonsCount": "20+ lessons",
+    "orginalPrice": "Rs 19,999",
+    "demo": "https://forms.gle/uyTPTsDBsfb5nMhi6",
+    "courseLink": "https://forms.gle/HiPa5Z2FxPLqqun16",
+    "sections": [
+        {
+            "title":"Introduction to Premiere Pro",
+            "topics":[
+                "Interface overview",
+                "Project setup",
+                "importing assets",
+                "Creating sequences"
+            ]
+        },
+        {
+            "title":"Editing Techniques",
+            "topics":[
+                "Cutting and trimming clips",
+                "Adding and adjusting transitions",
+                "Working with audio",
+                "Multi-camera editing"
+            ]
+        },
+        {
+            "title":"Effects and Color Correction",
+            "topics":[
+                "Applying effects and presets",
+                "Color correction and grading",
+                "Using adjustment layers",
+                "Keying and compositing "
+            ]
+        },
+        {
+            "title":"Audio Editing",
+            "topics":[
+                "Recording and importing audio",
+                "Mixing and balancing audio",
+                "Adding effects and processing audio",
+                "Syncing audio and video"
+            ]
+        },
+        {
+            "title":"Advanced Techiques",
+            "topics":[
+                "Dynamic linking with After Effects",
+                "Time remapping and speed changes",
+                "Working with proxies",
+                "Exporting and archiving project"
+
+            ]
+        },
+        {
+            "title":"Motion Graphics and Titles",
+            "topics":[
+                "Creating linking with After Effects",
+                "Animating text and graphics",
+                "Using templates and presets",
+                "Designing custom motion graphics"
+            ]
+        },
+        {
+            "title":"Collaboration and Workflow",
+            "topics":[
+                "Managing media and assets",
+                "Working with teams and collaborators",
+                "Keyboard shortcuts and workflow tips",
+                "Troubleshooting common issues"
+            ]
+        },
+        {
+            "title":"Project Workshop",
+            "topics":[
+                "Short film editing project",
+                "Documentary editing project",
+                "Music video editing project",
+                "Commercial or promo editing project"
+            ]
+        },
+        {
+            "title":" Introduction toAfter Effects",
+            "topics":[
+                "Interface Overview",
+                "Project setup",
+                "Importing assets",
+                "Creating compositions"
+            ]
+        },
+        {
+            "title":"Animation Techniques",
+            "topics":[
+                "Keyframe animation",
+                "Masking and rotoscoping",
+                "Puppet tools",
+                "Expression and automation"
+            ]
+        },
+        {
+            "title":"Effects and Compositing",
+            "topics":[
+                "Effects Overview",
+                "Layer styles and blending modes",
+                "Tracking and stabilization",
+                "3D compositing"
+            ]
+        },
+        {
+            "title":"Motion Graphics Design",
+            "topics":[
+                "Typography and text animation",
+                "Logo animation",
+                "Infographics and data visualization",
+                "Character animation"
+            ]
+        },
+        {
+            "title":"Advanced Techniques",
+            "topics":[
+                "Green screen keying ",
+                "Particle system",
+                "Motion tracking",
+                "Working with 3D models"
+            ]
+        },
+        {
+            "title":"Rendering and Exporting",
+            "topics":[
+                "Rendering settings and formats",
+                "Exporting for web and social media",
+                "Exporting for broadcast and film"
+            ]
+        },
+        
+        {
+            "title":"Project Workshops",
+            "topics":[
+                "Short animation project",
+                "Title sequence project",
+                "Infographic project",
+                "3D animation project "
+            ]
+        },
+        {
+            "title":"Final Project",
+            "topics":[
+                "Putting together all the skills and concepts learned throughout the course",
+                "Creating a final project that showcases UI/UX design skills and knowledge"
+            ]
+        }
+    ],
+    "others": [
+        {
+            "title":"Design Bootcamp - Learn UI / UX Design Skills Fast",
+            "description": "Learn how to create user-friendly designs that make people happy.",
+            "link": "/course/ui-ux-design",
+            "imgUrl": "/res/course/other-1.png"
+        },
+        {
+            "title":"Design Bootcamp - Learn Graphic Design Skills Fast",
+            "description": "Unleash Your Creativity: Learn Graphic Design to Bring Ideas to Life",
+            "link": "/course/grapic-design",
+            "imgUrl": "/res/course/other-2.png"
+        }
+    ]
+}

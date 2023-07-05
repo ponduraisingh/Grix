@@ -1,0 +1,174 @@
+{
+    "title": "UI/UX Design Course From Scratch",
+    "description": "Craft your dream career with our UI/UX course and learn to design experiences that inspire and shape the future!",
+    "imgUrl": "/res/course/01.jpg",
+    "overview": "Course Overview",
+    "overviewDescription": "Learn the knowledge got to succeed as a UX or UI designer. User experience & Interface guidelines, industry-recognized tools, and research techniques are covered in this course. To be ready for your new profession, you'll create a portfolio of work and receive one-on-one mentorship.",
+    "duration": "3 months",
+    "lessonsCount": "20+ lessons",
+    "orginalPrice": "Rs 14,999",
+    "demo": "https://forms.gle/uyTPTsDBsfb5nMhi6",
+    "courseLink": "https://forms.gle/HiPa5Z2FxPLqqun16",
+    "sections": [
+        {
+            "title":"Introduction to UI/UX Design",
+            "topics":[
+                "Definition of UI/UX Design",
+                "The Difference between UI and UX",
+                "Importance of UI/UX Design"
+            ]
+        },
+        {
+            "title":"Design Thinking",
+            "topics":[
+                "Overview of design thinking process",
+                "Ideation and brainstorming",
+                "Human-centered design"
+            ]
+        },
+
+        {
+            "title":"User Research",
+            "topics":[
+                "Conducting user research",
+                "User personas",
+                "User journey and experience maps"
+            ]
+        },
+        {
+            "title":"Information Architecture",
+            "topics":[
+                "Overview of Information Architecture",
+                "Sitemaps and user flows",
+                "Navigation design"
+                
+            ]
+        },
+        
+        {
+            "title":"Sketching and Wireframing",
+            "topics":[
+                "Sketching techniques",
+                "Wireframing tools",
+                "Developing low-fidelity prototypes"
+            ]
+        },
+        
+        {
+            "title":" Prototyping",
+            "topics":[
+                "Overview of prototyping",
+                "Types of prototyping",
+                "Tools and software for prototyping"
+            ]
+        },
+        {
+            "title":" Visual Design",
+            "topics":[
+                "Overview of visual design principles",
+                "Color theory",
+                "Typography"
+            ]
+        },
+
+        {
+            "title":"Design Systems and Style Guides",
+            "topics":[
+                "Overview of design systems and style guides",
+                "Creating design systems",
+                "Implementing design systems"
+            ]
+        },
+        
+        {
+            "title":"Interaction Design",
+            "topics":[
+                "Overview of interaction design",
+                "Types of interactions",
+                "Creating interactive prototypes"
+            ]
+        },
+        {
+            "title":"Usability Testing",
+            "topics":[
+                "Overview of usability testing",
+                "Conducting usability tests",
+                "Analyzing usability test results"
+            ]
+        },
+
+        {
+            "title":"Responsive Design",
+            "topics":[
+                "Overview of responsive design",
+                "Designing for different screen sizes",
+                "Creating responsive layouts"
+            ]
+        },
+        
+        {
+            "title":"Design for Mobile",
+            "topics":[
+                "Overview of mobile design",
+                "Mobile design patterns",
+                "Creating mobile prototypes"
+            ]
+        },
+        {
+            "title":"Motion Design and Animation",
+            "topics":[
+                "Overview of motion design and animation",
+                "Designing for motion",
+                "Creating motion prototypes"
+            ]
+        },
+
+        {
+            "title":"Collaborative Design",
+            "topics":[
+                "Collaborating with stakeholders and team members",
+                "Design handoff and design specs",
+                "Project management tools and methodologies"
+            ]
+        },
+        
+        {
+            "title":" Building a Portfolio",
+            "topics":[
+                "Importance of a design portfolio",
+                "Creating a design portfolio",
+                "Showcasing work and branding"
+            ]
+        },
+        {
+            "title":"Career Paths in UI/UX Design",
+            "topics":[
+                "UI/UX design job roles and responsibilities",
+                "Industry trends and job outlook",
+                "Networking and job search strategies"
+            ]
+        },
+
+        {
+            "title":"Final Project",
+            "topics":[
+                "Putting together all the skills and concepts learned throughout the course",
+                "Creating a final project that showcases UI/UX design skills and knowledge"
+            ]
+        }
+    ],
+    "others": [
+        {
+            "title":"Design Bootcamp - Learn Graphic Design Skills Fast",
+            "description": "Unleash Your Creativity: Learn Graphic Design to Bring Ideas to Life",
+            "link": "/course/grapic-design",
+            "imgUrl": "/res/course/other-2.png"
+        },
+        {
+            "title":"Zero To Hero - Motion Graphics & Video Editing",
+            "description": "Transform Your Vision into Reality: Master the Art of Video Editing",
+            "link": "/course/video-editing",
+            "imgUrl": "/res/course/other-3.png"
+        }
+    ]
+}
