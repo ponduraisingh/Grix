@@ -1,0 +1,180 @@
+{
+    "title": "Design Bootcamp-Learn Graphic Design Skills",
+    "description": "Craft your dream career with our UI/UX course and learn to design experiences that inspire and shape the future!",
+    "imgUrl": "/res/course/02.jpg",
+    "overview": "Course Overview",
+    "overviewDescription": "A graphic design course typically covers the principles, theories, and practices of visual communication and design. It can be taught at different levels, from introductory to advanced, and may focus on specific aspects of graphic design, such as typography, branding, or user experience design.",
+    "duration": "3 months",
+    "lessonsCount": "20+ lessons",
+    "orginalPrice": "Rs 16,999",
+    "demo": "https://forms.gle/uyTPTsDBsfb5nMhi6",
+    "courseLink": "https://forms.gle/HiPa5Z2FxPLqqun16",
+    "sections": [
+        {
+            "title":"Introduction to Photoshop",
+            "topics":[
+                "Interface overview",
+                "Document setup",
+                "Navigation and zooming",
+                "Understanding layers and layer masks"
+            ]
+        },
+        {
+            "title":"Basic Tools and Techniques",
+            "topics":[
+                "Selecting and moving object",
+                "Using the Crop tool",
+                "Using the Brush tool",
+                "Working with the Eraser tool"
+            ]
+        },
+        {
+            "title":"Color Correction and Color Adjustment",
+            "topics":[
+                "Adjusting brightness, contrast, and saturation",
+                "Using the Curves and Levels adjustment",
+                "Creating and using adjustment layer",
+                "Understanding color theory"
+            ]
+        },
+        {
+            "title":"Working with Text",
+            "topics":[
+                "Creating and formatting text",
+                "Applying layer styles to text",
+                "Warping text",
+                "Creating and using text effects"
+            ]
+        },
+        {
+            "title":"Retouching and Repairing Images",
+            "topics":[
+                "Removing blemishes and imperfection",
+                "Removing objects from an image",
+                "Enhancing skin tone",
+                "Adjusting facial features"
+
+            ]
+        },
+        {
+            "title":"Working with Filters and Effects",
+            "topics":[
+                "Creating and using special effects filters",
+                "Applying and modifying artistic filters",
+                "Creating and using layer styles",
+                "Creating and using masks for filters and effects"
+            ]
+        },
+        {
+            "title":"Saving and Exporting Images",
+            "topics":[
+                "Saving in different file formats",
+                "Exporting for print and web",
+                "Creating and using slices",
+                "Understanding resolution and image size"
+            ]
+        },
+        {
+            "title":"Project Workshop",
+            "topics":[
+                "Basic photo editing project",
+                "Creating a poster or flyer project",
+                "Creating a social media graphic project",
+                "Creating a business card or stationary project"
+            ]
+        },
+        {
+            "title":"Illustrator",
+            "topics":[
+                "Interface Overview",
+                "Document setup",
+                "Navigation and zooming",
+                "Drawing and painting tool"
+            ]
+        },
+        {
+            "title":"Vector Drawing Techniques",
+            "topics":[
+                "Creating and editing shapes",
+                "Using the pen tool",
+                "Working with paths and anchor points",
+                "Drawing with the pencil tool"
+            ]
+        },
+        {
+            "title":"Color and Gradients",
+            "topics":[
+                "Color theory and swatches",
+                "Using the color picker and eyedropper",
+                "Applying gradients and patterns",
+                "Working with transparency and blending modes"
+            ]
+        },
+        {
+            "title":"Typography and Text Layout",
+            "topics":[
+                "Creating and formatting text",
+                "Working with type styles and fonts",
+                "Kerning and tracking",
+                "Text on a path and text wrapping"
+            ]
+        },
+        {
+            "title":"Advanced Techniques",
+            "topics":[
+                "Live trace and image tracing ",
+                "Using the shape builder tool",
+                "Creating and working with symbols",
+                "Using the perspective grid"
+            ]
+        },
+        {
+            "title":"Working with Images and Artwork",
+            "topics":[
+                "Importing images and graphics ",
+                "Tracing and coloring images",
+                "Creating images masks and clipping paths",
+                "Using the image trace feature"
+            ]
+        },
+        {
+            "title":"Layout and Design Principles",
+            "topics":[
+                "Grid system and alignment",
+                "Designing for print and web",
+                "Creating logos and icons",
+                "Building a brand identity"
+            ]
+        },
+        {
+            "title":"Project Workshops",
+            "topics":[
+                "Logo design project",
+                "Icon design",
+                "Poster design project",
+                "Business Card design project"
+            ]
+        },
+        {
+            "title":"Final Project",
+            "topics":[
+                "Putting together all the skills and concepts learned throughout the course",
+                "Creating a final project that showcases UI/UX design skills and knowledge"
+            ]
+        }
+    ],
+    "others": [
+        {
+            "title":"Design Bootcamp - Learn UI / UX Design Skills Fast",
+            "description": "Learn how to create user-friendly designs that make people happy.",
+            "link": "/course/ui-ux-design",
+            "imgUrl": "/res/course/other-1.png"
+        },
+        {
+            "title":"Zero To Hero - Motion Graphics & Video Editing",
+            "description": "Transform Your Vision into Reality: Master the Art of Video Editing",
+            "link": "/course/video-editing",
+            "imgUrl": "/res/course/other-3.png"
+        }
+    ]
+}

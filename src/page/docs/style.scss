@@ -1,0 +1,101 @@
+.docs-page {
+    .docs-title {
+        h1 {
+            font-size: 40px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            @media (min-width: 1024px) {
+                font-size: 48px;
+            }
+        }
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            @media (min-width: 1024px) {
+                font-size: 40px;
+            }
+        }
+        p {
+            font-size: 18px;
+            font-family: var(--ff-cabin);
+            line-height: 1.6;
+            margin: 0;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            @media (min-width: 1024px) {
+                font-size: 20px;
+            }
+            @media (min-width: 1280px) {
+                font-size: 20px;
+            }
+            @media (min-width: 1536px) {
+                font-size: 20px;
+            }
+        }
+    }
+    .docs-content {
+        h3 {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            margin: 0 0 1.5rem 0;
+            opacity: 0.9;
+            text-transform: uppercase;
+            @media (min-width: 1024px) {
+                font-size: 24px;
+            }
+        }
+        li {
+            font-size: 16px;
+            font-family: var(--ff-cabin);
+            line-height: 1.75;
+            margin: 0 0 1.5rem 0;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            opacity: 0.8;
+            @media (min-width: 1024px) {
+                font-size: 18px;
+            }
+            @media (min-width: 1280px) {
+                font-size: 18px;
+            }
+            @media (min-width: 1536px) {
+                font-size: 18px;
+            }
+        }
+        p {
+            font-size: 16px;
+            font-family: var(--ff-cabin);
+            line-height: 1.75;
+            margin: 0 0 1.5rem 0;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            opacity: 0.8;
+            @media (min-width: 1024px) {
+                font-size: 18px;
+            }
+            @media (min-width: 1280px) {
+                font-size: 18px;
+            }
+            @media (min-width: 1536px) {
+                font-size: 18px;
+            }
+        }
+    }
+    .background-img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top:0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        &.gradient{
+            background: linear-gradient(52.01deg, #31135E 0%, #662ABC 100%);
+            opacity: 1;
+        }
+    }
+}

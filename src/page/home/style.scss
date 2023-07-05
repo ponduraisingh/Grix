@@ -1,4 +1,14 @@
 .section{
+    padding: 0 32px;
+    &.one{
+        min-height: 100vh;
+    }
+    &.two{
+        min-height: 100vh;
+    }
+    &.three{
+        min-height: 600px;
+    }
     .MuiButton-root{
         background-color: var(--action);
         color: var(--action-text);
@@ -11,10 +21,10 @@
             color: var(--action-hover-text);
         }
     }
-    .min-height-420{
+    .min-height-420 {
         min-height: 420px;
     }
-    .background-img{
+    .background-img {
         width: 100%;
         height: 100%;
         position: absolute;
@@ -24,8 +34,9 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        &.pattern{
-            opacity: 0.08;
+        &.gradient{
+            background: linear-gradient(90deg, #44FF9A 0%, #44B0FF 22.86%, #8B44FF 48.36%, #FF6644 73.33%, #EBFF70 99.34%);
+            opacity: 0.3;
         }
     }
     .background-pattern{
@@ -48,6 +59,44 @@
             background-size: contain;
             background-repeat:  repeat;
             background-position: center;
+            background-attachment: fixed;
+        }
+    }
+    .showcase{
+        position: relative;
+        .floatborder{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border-radius: 60px;
+            border: 1px solid #ffffff;
+            top:-1px;
+            right: -16px;
+            z-index: -1;
+        }
+        .floatwave{
+            position: absolute;
+            top:-16px;
+            right: -64px;
+            z-index: 0;
+        }
+        .rotateStar{
+            position: absolute;
+            top:-16px;
+            left: -16px;
+            z-index: 2;
+        }
+        .image{
+            max-width: 520px;
+            width: 100%;
+            border-radius: 60px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            img{
+                max-width: 100%;
+                max-height: 100%;
+            }
         }
     }
     &.primary {
@@ -109,8 +158,45 @@
     }
     .bubble-section{
         & > * {
-            max-width: 180px;
+            max-width: 240px;
+            min-width: 240px;
             width: 100%;
+            padding: 20px 40px
+        }
+    }
+    .flex-card {
+        width: 300px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.25);
+        .card-list {
+            width: 100%;
+            border: 1px soild transparent;
+            margin: 1px;
+            padding: 32px;
+            border-radius: 16px;
+            background: #0F0F0F;
+            display: flex;
+            gap: 16px;
+            flex-direction: column;
+            overflow: hidden;
+            background-clip: padding-box;
+            .icon {
+                width: 60px;
+                height: 60px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 50%;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            p {
+                font-size: 20px;
+                margin: 0;
+            }
+        }
+        &:hover {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.05) 100%);
         }
     }
     .bubble {
@@ -120,6 +206,7 @@
         border-radius: 50%;
         background-clip: padding-box;
         padding: 1px;
+        transform-origin: center center;
         .circle {
             position: relative;
             width: 100%;
@@ -139,15 +226,23 @@
             top: 0px; bottom: 0px;
             left: 0px; right: 0px;
             border-radius: 50%;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.0) 100%);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(0, 0, 0, 0.8) 100%);
+        }
+        span {
+            transform-origin: center center;
+            position: absolute;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
         }
         img {
-            position: absolute;
             width: 50%;
         }
     }
     .bubble-space {
-        min-height: 120px;
+        min-height: 50%;
     }
 }
 .card {
@@ -155,7 +250,7 @@
     padding: 16px;
     background: var(--card);
     max-width: 480px;
-    min-width: 360px;
+    min-width: 320px;
     width: 100%;
     transition: all 0.3s ease-out;
     text-decoration: none;
@@ -231,6 +326,46 @@
             height: 66px;
             overflow: hidden;
             letter-spacing: 0.02em;
+        }
+    }
+}
+.logo{
+    color: var(--text);
+    height: 100%;
+    max-height: 68px;
+    .logo-name{
+        color: var(--text);
+            max-height: 100%;
+    }
+    .logo-name{
+        color: var(--text);
+            max-height: 100%;
+    }
+    svg{
+        color: var(--text);
+            max-height: 100%;
+    }
+}
+.ribbon-graxi {
+    background-color: #E9F300;
+    padding: 12px 0;
+    color: #000000;
+    height: 44px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    .content {
+        display: flex;
+        gap: 64px;
+        align-items: center;
+        font-size: 20px;
+        line-height: 20px;
+        position: absolute;
+        .dot {
+            width: 6px;
+            height: 6px;
+            background: #000000;
+            border-radius: 50%;
         }
     }
 }

@@ -1,8 +1,6 @@
-import React from "react";
-import type { MutableRefObject } from 'react'
-import { animate, motion, useMotionTemplate, useMotionValue, useTransform } from 'framer-motion';
+import React, {ReactNode} from "react";
+import { animate, easeInOut, motion, useMotionTemplate, useMotionValue, useTransform } from 'framer-motion';
 import styled from '@emotion/styled';
-import { height, width } from "@mui/system";
 
 
 // sheen
@@ -54,23 +52,66 @@ export const SheenAnimation = ({animationRef, className}: {animationRef:React.Re
   rgba(15, 15, 15, 0.2))`;
   
   React.useEffect(() => {
-  if (!animationRef || !animationRef.current) return;
-  const handleMouseMove = (e: MouseEvent) => {
-
-    animate(mouseX, e.clientX);
-    animate(mouseY, e.clientY);
-  };
-    animationRef.current.addEventListener('mousemove', handleMouseMove);
-  // cleanup
-  return () => {
     if (!animationRef || !animationRef.current) return;
-    animationRef.current.removeEventListener('mousemove', handleMouseMove);
-  };
-  }, []);
+    const handleMouseMove = (e: MouseEvent) => {
+      animate(mouseX, e.clientX);
+      animate(mouseY, e.clientY);
+    };
+    animationRef.current.addEventListener('mousemove', handleMouseMove);
+    // cleanup
+    return () => {
+      animationRef && animationRef.current && animationRef.current.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, [animationRef]);
 
   return (
   <AnimationWrapper className={className} style={{ backgroundImage: sheenGradient }}>
   </AnimationWrapper>
+  );
+}
+
+// Animation3D
+// export const Animation3D = ({animationRef, className}: {animationRef:React.RefObject<HTMLAnchorElement> | null; className:string}) => {
+export const Animation3D = ({className, children}:{className: string; children:ReactNode}) => {
+  const AnimationWrapper = styled(motion.div)`
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  `;
+  const CardRef = React.useRef<HTMLDivElement>(null);
+  const [dimension,setDimension] = React.useState({w: 480, h: 480});
+  const x = useMotionValue(dimension.w/2);
+  const y = useMotionValue(dimension.h/2);
+  
+  const rotateX = useTransform(y, [0, dimension.w], [-12, 12], {ease: easeInOut});
+  const rotateY = useTransform(x, [0, dimension.h], [-12, 12], {ease: easeInOut});
+  
+  const rotateInnerX = useTransform(y, [0, dimension.w], [18, -18], {ease: easeInOut});
+  const rotateInnerY = useTransform(x, [0, dimension.h], [18, -18], {ease: easeInOut});
+
+  function handleMouse(event: React.MouseEvent<Element>) {
+    const rect = event.currentTarget.getBoundingClientRect();
+    const clientX = event.screenX - rect.left, clientY = event.clientY - rect.top;
+    x.set(clientX)
+    y.set(clientY)
+  }
+  function resetMouse(event: React.MouseEvent<Element>) {
+    x.set(dimension.w / 2)
+    y.set(dimension.h / 2)
+  }
+  React.useEffect(()=>{
+    if(CardRef && CardRef.current){
+      const max= Math.max(CardRef.current.clientWidth, CardRef.current.clientHeight)
+      const w = Math.round(max), h = Math.round(max);
+      setDimension({w, h})
+    }
+  },[CardRef])  
+  return (
+  <div className={className} onMouseMove={handleMouse} onMouseLeave={resetMouse} ref={CardRef}>
+    <AnimationWrapper className="wrapper" style={{rotateX, rotateY}}>
+      <AnimationWrapper style={{rotateX: rotateInnerX, rotateY: rotateInnerY}}>{children}</AnimationWrapper>
+    </AnimationWrapper>
+    </div>
   );
 }
 
